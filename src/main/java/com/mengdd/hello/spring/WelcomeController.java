@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class WelcomeController {
 
-    @RequestMapping("/XXX")
+    @RequestMapping("/")
     public String printWelcome() {
 
         return "index";

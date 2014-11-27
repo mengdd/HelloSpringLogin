@@ -13,3 +13,11 @@ hs_err_pid*
 
 # Project and IDE settings
 .idea/
+# IDEA artifacts and output dirs
+*.iml
+*.ipr
+*.iws
+
+# Ignore gradle files
+.gradle/
+build/

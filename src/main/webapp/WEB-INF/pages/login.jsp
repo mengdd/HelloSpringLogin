@@ -12,7 +12,7 @@
     <title>User Login</title>
 </head>
 <body>
-<form action="/success">
+<form action="${pageContext.request.contextPath}/success">
     username: <input type="text" name="username" placeholder="username or email" value="" required/><br>
     password: <input type="password" name="password" placeholder="password" value="" required/><br>
     <input type="submit" value="submit">

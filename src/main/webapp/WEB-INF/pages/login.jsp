@@ -51,12 +51,37 @@
 
 
     </style>
+
+    <script type="text/javascript">
+        function clientValidate() {
+            var username = document.getElementById("username"),
+                    password = document.getElementById("password");
+            if ("" == username.value) {
+                alert("username can't be blank!");
+                return false;
+            }
+
+            if ("" == password.value) {
+                alert("password can't be blank!");
+                return false;
+            }
+
+            if (password.value.length < 6) {
+                alert("password is too short!");
+                return false;
+            }
+
+
+            return true;
+        }
+    </script>
     <title>User Login</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/success">
-    username: <input type="text" name="username" placeholder="username or email" value="" required/><br>
-    password: <input type="password" name="password" placeholder="password" value="" required/><br>
+<%--note: onsubmit="" there is a "return" key word followed--%>
+<form onsubmit="return clientValidate()" action="${pageContext.request.contextPath}/success">
+    username: <input id="username" type="text" name="username" placeholder="username or email"/><br>
+    password: <input id="password" type="password" name="password" placeholder="password"/><br>
     <input type="submit" value="submit" style="cursor:pointer">
     <%--cursor becomes a pointer on the submit button--%>
 </form>

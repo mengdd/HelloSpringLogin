@@ -1,0 +1,11 @@
+input[type="email"], input[type="password"] {
+    background-color: aqua;
+    border: 1px solid #ccc;
+    padding: 4%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 95%;
+    color: #555;
+}
+
+body {background-color: yellow}
+h1 {background-color: #00ff00}

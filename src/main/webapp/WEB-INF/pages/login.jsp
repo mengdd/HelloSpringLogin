@@ -8,14 +8,57 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <style></style>
+    <style>body {
+        background-color: white;
+    }
+
+    input {
+        background-color: azure;
+        font-family: 'Open Sans', sans-serif;
+        font-size: medium;
+        border-radius: 5px;
+        border-color: cornflowerblue;
+        margin: 10px;
+        padding: 4px;
+
+    }
+
+    /*input has focus: has cursor in it*/
+    input:focus {
+        background-color: bisque;
+
+    }
+
+    input[type="submit"] {
+        background: rgba(114, 212, 202, 1);
+        border-radius: 5px;
+        border-top: 1px solid #B2ECE6;
+        box-shadow: 0 0 0 1px #46A294, 0 2px 2px #808389;
+        color: #FFFFFF;
+        font-size: 1.5em;
+        width: auto;
+        text-shadow: 0 1px 2px #21756A;
+    }
+
+    input[type="submit"] :hover {
+        background: linear-gradient(to bottom, rgba(107, 198, 186, 1) 0%, rgba(57, 175, 154, 1) 100%);
+    }
+
+    input[type="submit"]:active {
+        box-shadow: inset 0 0 5px #000;
+        background: linear-gradient(to bottom, rgba(57, 175, 154, 1) 0%, rgba(107, 198, 186, 1) 100%);
+    }
+
+
+    </style>
     <title>User Login</title>
 </head>
 <body>
 <form action="${pageContext.request.contextPath}/success">
     username: <input type="text" name="username" placeholder="username or email" value="" required/><br>
     password: <input type="password" name="password" placeholder="password" value="" required/><br>
-    <input type="submit" value="submit">
+    <input type="submit" value="submit" style="cursor:pointer">
+    <%--cursor becomes a pointer on the submit button--%>
 </form>
 </body>
 </html>

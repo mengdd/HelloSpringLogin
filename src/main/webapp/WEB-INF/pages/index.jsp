@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../../resources/css/forms.css">
+    <link rel="stylesheet" type="text/css" href="css/forms.css">
     <%--FIX ME: I tried many ways but I couldn't set the CSS path right.--%>
     <title>Hello Login</title>
 </head>
